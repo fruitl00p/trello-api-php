@@ -1,7 +1,6 @@
 <?php
 require 'curl.php';
 require 'trello-action.php';
-require 'trello-auth.php';
 require 'trello-board.php';
 require 'trello-card.php';
 require 'trello-checklist.php';
@@ -26,9 +25,9 @@ class Trello
 	 * @param string $key   	Trello Developer Key
 	 * @param string $token 	User token
 	 */
-	function __construct(){
-		$this->key = TRELLO_DEV_KEY;
-		$this->token = TRELLO_USER_TOKEN;
+	function __construct($key, $token){
+		$this->key = $key;
+		$this->token = $token;
 
 		$this->curl = new Curl();
 	}
