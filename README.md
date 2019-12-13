@@ -11,7 +11,7 @@ $token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 ## Boards
 ```php
 
-$trelloBoard = new TrelloBoard($key, $token);
+$trelloBoard = new \Kingsquare\Trello\Board($key, $token);
 $boardId = 'xxxxxxxxxxxxxxxxxxxxxxxx';
 
 // Getting board info
@@ -29,7 +29,7 @@ $return = $trelloBoard->get($boardId, 'cards', $arguments);
 
 ## Cards
 ```php
-$trelloCard = new TrelloCard($key, $token);
+$trelloCard = new \Kingsquare\Trello\Card($key, $token);
 $cardId = 'xxxxxxxxxxxxxxxxxxxxxxxx';
 
 // Getting Card Info

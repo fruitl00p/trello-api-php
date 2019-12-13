@@ -1,0 +1,14 @@
+{
+  "name": "kingsquare/trello-api-php",
+  "description": "PHP SDK to use Trello Api forked from https://github.com/SimplesVet/trello-api-php",
+  "type": "sdk",
+  "license": "proprietary",
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kingsquare\\Trello\\": "src/"
+    }
+  }
+}

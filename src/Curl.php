@@ -1,6 +1,6 @@
 <?php
 
-namespace Curl;
+namespace Kingsquare\Trello;
 
 class Curl
 {

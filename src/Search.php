@@ -1,10 +1,12 @@
 <?php
 
+namespace Kingsquare\Trello;
+
 /**
 *
 * API Reference: https://developers.trello.com/advanced-reference/search
 */
-class TrelloSearch extends Trello
+class Search extends Trello
 {
 	/**
 	 * The string of collection on Trello API.
@@ -46,8 +48,8 @@ class TrelloSearch extends Trello
 			$this->curl->get($url . 'search' . $authParam . $argumentsParam);
 			$this->id = $this->curl->response->id;
 			return $this->curl->response;
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage());
+		} catch (\Exception $e) {
+			throw new \Exception($e->getMessage());
 		}
 	}
 }

@@ -1,18 +1,11 @@
 <?php
-require 'curl.php';
-require 'trello-action.php';
-require 'trello-board.php';
-require 'trello-card.php';
-require 'trello-checklist.php';
-require 'trello-label.php';
-require 'trello-list.php';
-require 'trello-search.php';
 
-use Curl\Curl;
+namespace Kingsquare\Trello;
+
 /**
 *
 */
-class Trello
+abstract class Trello
 {
 	private $key;
 	private $token;
@@ -68,8 +61,8 @@ class Trello
 			$this->curl->get($url . $this->collection .'/' . $collectionId . '/' . $complement . $authParam . $argumentsParam);
 			$this->id = $this->curl->response->id;
 			return $this->curl->response;
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage());
+		} catch (\Exception $e) {
+			throw new \Exception($e->getMessage());
 		}
 	}
 
@@ -91,8 +84,8 @@ class Trello
 
 			$this->curl->post($url . $call, $data);
 			return $this->curl->response;
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage());
+		} catch (\Exception $e) {
+			throw new \Exception($e->getMessage());
 		}
 	}
 
@@ -109,8 +102,8 @@ class Trello
 			$url = $this->getUrl();
 			$rs = $this->curl->put($url . $this->collection .'/' . $collectionId . '/' . $complement . $authParam, $data);
 			return $this->curl->response;
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage());
+		} catch (\Exception $e) {
+			throw new \Exception($e->getMessage());
 		}
 	}
 
@@ -127,8 +120,8 @@ class Trello
 
 			$this->curl->delete($url . $this->collection .'/' . $collectionId . '/' . $complement . $authParam);
 			return $this->curl->response;
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage());
+		} catch (\Exception $e) {
+			throw new \Exception($e->getMessage());
 		}
 	}
 }

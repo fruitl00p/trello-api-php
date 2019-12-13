@@ -1,10 +1,12 @@
-<?php 
+<?php
+
+namespace Kingsquare\Trello;
 
 /**
 *
 * API Reference: https://developers.trello.com/advanced-reference/board
 */
-class TrelloBoard extends Trello
+class Board extends Trello
 {
 	public $collection = "board";
 }

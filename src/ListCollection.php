@@ -1,10 +1,11 @@
 <?php
 
+namespace Kingsquare\Trello;
 /**
 *
 * API Reference: https://developers.trello.com/advanced-reference/list
 */
-class TrelloList extends Trello
+class ListCollection extends Trello
 {
 	/**
 	 * The string of collection on Trello API.
